@@ -18,7 +18,7 @@ their [documentation](https://mbillsonlinepaymentsapi.docs.apiary.io/#introducti
 ## Installation
 
 mBills PHP SDK requires CURL, JSON and OPENSSL extensions to be present on the system. Download the files and require
-MBills.class.php.
+MBills.class.php. The library will be added to Composer soon.
 
 ## Usage
 
@@ -37,7 +37,7 @@ $mbills = new MBillsTest(
 );
 ```
 
-Production example:
+Production example (found in /example.php):
 
 ```php
 $config = include __DIR__ . '/config.php'; //Configuration, if you wish to use it
@@ -53,7 +53,7 @@ $mbills = new MBills(
 );
 ```
 
-Requesting payment:
+Requesting payment (found in /example.php):
 
 ```php
 if($mbills->requestPayment()) { //If request was made successfully
@@ -65,7 +65,7 @@ if($mbills->requestPayment()) { //If request was made successfully
 }
 ```
 
-Response / return example:
+Webhook call example (found in /example_webhook.php):
 
 ```php
 //Obtain forwarded nonce
